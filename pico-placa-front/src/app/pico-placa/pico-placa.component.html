@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div class="centered-div">
+    <p-fieldset>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center text-primary">
+          <span class="pi pi-car"></span>
+          <span class="font-bold text-lg"> Pico y Placa</span>
+        </div>
+      </ng-template>
+
+      <div>
+        <label for="placa">Número de Placa </label>
+        <input type="text" maxlength="7" id="placa" pInputText [(ngModel)]="license" placeholder="ABC0123" />
+      </div>
+
+      <br>
+
+      <div>
+        <label for="fecha">Fecha: </label>
+        <p-calendar [(ngModel)]="dateRestriction" [showIcon]="true" name="dateValidation" dateValidation="ngModel"
+          dateFormat="dd-mm-yy"></p-calendar>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="hora">Hora: </label>
+        <p-calendar [showTime]="true" [timeOnly]="true" hourFormat="24" [(ngModel)]="hourRestriction">
+        </p-calendar>
+      </div>
+
+      <br>
+
+      <div style="margin: 10px; text-align: center;">
+        <p-button label="Validar" icon="pi pi-check" (click)="validarPicoPlaca()"></p-button>
+      </div>
+
+    </p-fieldset>
+
+      <div class="result-div" *ngIf="resultMessage !== null">
+        <label>{{resultMessage}}</label>
+      </div>
+
+  </div>
+</body>
+
+</html>
