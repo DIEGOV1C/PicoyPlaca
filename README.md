@@ -28,11 +28,12 @@ git clone https://github.com/tu-usuario/tu-repositorio.git
 
 cd tu-repositorio/ejercicio
 
-3. Compila y ejecuta la aplicación: Utiliza Spring Boot CLI o una herramienta de construcción con Maven para compilar y ejecutar la aplicación
+3. Compila y ejecuta la aplicación: Utiliza Spring Boot CLI o una herramienta de construcción (Maven) para compilar y ejecutar la aplicación
 
 mvn spring-boot:run
 
 4. El backend debería estar ahora en funcionamiento en http://localhost:8080. Puedes probar la API accediendo a esta URL desde un cliente HTTP, como Postman.
+
 
 Ejecutar el Frontend en Angular
 
